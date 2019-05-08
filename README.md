@@ -89,5 +89,5 @@ function hoisting() {
 }
 ```
 
-This code, on the other hand, returns `undefined` because of the _function expression_ being hoisted and has no value due to the function returning before the value is set.
+This code, on the other hand, returns `undefined` because of the _function expression_ is being hoisted and has no value due to the function returning before the value is set.
 
