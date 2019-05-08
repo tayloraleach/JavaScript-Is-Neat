@@ -62,3 +62,32 @@ NaN === NaN
 Returns `false`. Great.
 
 So use the `isNan()` function to check for `NaN`. 
+
+## Hoisting
+
+What do you expect to be returned by this function?
+
+```
+function hoisting() {
+  return name;
+  name = 'taylor';
+  function name() { }
+  name = 0;
+}
+```
+
+If you're like me your initial instinct was to think that the function returned `undefined` because it just returns right away and jumps out of the code block, but that is incorrect.
+
+The function returns `function` due to a phenomenon called hosting. All defined variables in an execution context are 'hoisted' to the top including _function declarations_.
+
+```
+function hoisting() {
+  return name;
+  name = 'taylor';
+  const name = function() { }
+  name = 0;
+}
+```
+
+This code, on the other hand, returns `undefined` because of the _function expression_ being hoisted and has no value due to the function returning before the value is set.
+
