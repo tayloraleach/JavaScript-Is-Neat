@@ -8,4 +8,5 @@ const value = true + true - false;
 console.log(value);
 ```
 **Answer: 2**
+
 When adding two booleans together true gets converted to 1, and false gets converted to 0 so: 1 + 1 - 2 = 2
