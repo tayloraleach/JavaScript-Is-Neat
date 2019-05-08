@@ -22,6 +22,17 @@ const foobar = function() {
 foobar();
 ```
 
-I'm sure everyone has encountered this one but it's something that may get overlooked if you're getting quizzed on your skills and you miss the little things.
+I'm sure everyone has encountered this one but it's something that may get overlooked if you're getting quizzed on your skills and you're crunched for time.
 
-This obviously returns `undefined` because the line with the return statement gets a semicolon added to it and it basically returns nothing.
+This obviously returns `undefined` because the line with the return statement gets a semicolon added to it and the function it basically returns nothing.
+
+## Are Strings Strings?
+```
+"hey I like to code" instanceof String
+```
+This one got me pretty good. Seems logical that a string is a string...
+ but without explicitly calling the `new String()` constructor it is actually just an `object` and the above code returns false.
+```
+new String('js is fun') instanceof String
+```
+But this will obviously return true.
