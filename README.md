@@ -36,3 +36,11 @@ This one got me pretty good. Seems logical that a string is a string...
 new String('js is fun') instanceof String
 ```
 But this will obviously return true.
+
+## Clearing an Array
+```
+const arr = ['javascript', 'html', 'css'];
+arr.length = 0;
+console.log(arr[2]);
+```
+What do you expect to log to the console? A bit of an odd one but you can actually empty the contents of an array by setting it's length to 0. So trying to index into the array will produce `undefined` as the array would now be empty.
