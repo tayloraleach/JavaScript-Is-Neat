@@ -44,3 +44,21 @@ arr.length = 0;
 console.log(arr[2]);
 ```
 What do you expect to log to the console? A bit of an odd one but you can actually empty the contents of an array by setting it's length to 0. So trying to index into the array will produce `undefined` as the array would now be empty.
+
+## What is NaN?
+
+`NaN` in JavaScript sure is neat. It stands for 'not a number' and indicates the value is not a legal number. So since `NaN` is not-a-number than what is it? It's a number.
+
+```
+typeof NaN 
+```
+
+Returns `"number"`. Nice.
+
+```
+NaN === NaN
+```
+
+Returns `false`. Great.
+
+So use the `isNan()` function to check for `NaN`. 
